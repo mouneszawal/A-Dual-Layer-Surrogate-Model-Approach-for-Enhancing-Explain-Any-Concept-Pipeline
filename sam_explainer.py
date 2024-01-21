@@ -2,8 +2,6 @@ from __future__ import print_function, division
 import torch
 from PIL import Image
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
-import matplotlib.pyplot as plt
-import urllib
 from PIL import Image
 from torchvision import transforms
 import numpy as np
