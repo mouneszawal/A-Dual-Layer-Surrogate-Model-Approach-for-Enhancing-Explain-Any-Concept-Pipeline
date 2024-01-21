@@ -163,7 +163,7 @@ print("explaining {} images".format(num_sample))
 
 num_sample = len(data_iter)
 
-net_type = "orig" # | Orig for original surrogate model - Enhanced for enhanced surrogate model
+net_type = "Enhanced" # | Orig for original surrogate model - Enhanced for enhanced surrogate model
 delete = False
 test_type = "Deletion" if delete else "Insertion"
 
