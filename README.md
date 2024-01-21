@@ -34,6 +34,8 @@ python demo_samshap.py
 - You my need to modify some paths in the codes. ( SAM model's path, ImageNet dataset's path , etc.)
 - For Insertion evaluation, set the delete variable in the main_imagenet.py and coco_evaluation.py to False.
 - To activate the enhanced model, set net_type variable to "Enhanced", for the original model set it to "orig".
+- GPU is required.
+- Run the code simply from the command line or from any IDE.
 
 ## Acknowledgment
 This code was built on the original paper's codes. please refer [original paper code](https://github.com/Jerry00917/samshap/tree/main).
