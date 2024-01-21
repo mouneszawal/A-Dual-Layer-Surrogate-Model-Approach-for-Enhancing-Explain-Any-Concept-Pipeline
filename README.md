@@ -1,27 +1,23 @@
-# Explain Any Concept: Segment Anything Meets Concept-Based Explanation (EAC) Poster @ NeurIPS 2023
-Code for the paper "Explain Any Concept: Segment Anything Meets Concept-Based Explanation".
+# A Dual-Layer Surrogate Model Approach for Enhancing Explain Any Concept Pipeline
+Code for the paper "A Dual-Layer Surrogate Model Approach for Enhancing Explain Any Concept Pipeline".
 
-## Citation
-Please cite the paper as follows if you use the data or code from Samshap:
-```
-@inproceedings{
-sun2023explain,
-title={Explain Any Concept: Segment Anything Meets Concept-Based Explanation},
-author={Ao Sun and Pingchuan Ma and Yuanyuan Yuan and Shuai Wang},
-booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-year={2023},
-url={https://openreview.net/forum?id=X6TBBsz9qi}
-}
-```
-## Contact
-Please reach out to us if you have any questions or suggestions. You can send an email to asunac@connect.ust.hk.
+## Requirements
+
+This project requires the following software:
+
+- Python 3+ 
+- PyTorch (torch, torchvision)
+- segment-anything
+- sklearn
+- PIL
+- pycocotools
+- numpy
+- tqdm
+
+Make sure you have the required software installed before proceeding.
 
 ## Overview
-Here is an overview of our work, and you can find more in our [Paper](https://openreview.net/forum?id=X6TBBsz9qi).
-![Overview](./demo.png)
-
-Our EAC approach generates high accurate and human-understandable post-hoc explanations.
-![demo](./all_demo.png)
+Experiments to enhance the performance proposed in the original paper "Explain Any Concept: Segment Anything Meets Concept-Based Explanation (EAC)" [Paper](https://openreview.net/forum?id=X6TBBsz9qi).
 
 ## Downloading the SAM backbone
 We use ViT-H as our default SAM model. For downloading the pre-train model and installation dependencies, please refer [SAM repo](https://github.com/facebookresearch/segment-anything#model-checkpoints).
@@ -31,3 +27,13 @@ Simply run the following command:
 ```
 python demo_samshap.py
 ```
+
+## Running the evaluation codes
+- Get ImageNet Dataset, please check this [link](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data) to download it. Then move Data folder to imagnet directory in this project.
+- Get COCO Dataset, please check this [link](https://www.kaggle.com/datasets/awsaf49/coco-2017-dataset) to download it.
+- You my need to modify some paths in the codes. ( SAM model's path, ImageNet dataset's path , etc.)
+- For Insertion evaluation, set the delete variable in the main_imagenet.py and coco_evaluation.py to False.
+- To activate the enhanced model, set net_type variable to "Enhanced", for the original model set it to "orig".
+
+## Acknowledgment
+This code was built on the original paper's codes. please refer [original paper code](https://github.com/Jerry00917/samshap/tree/main).
